@@ -5,17 +5,26 @@ This repository contains a simple Terraform configuration to deploy a two-tier a
 
 Files Included
 vpc.tf: Defines the VPC and networking resources.
+
 ec2.tf: Defines the EC2 instance configuration.
+
 elb.tf: Defines the Elastic Load Balancer.
+
 asg.tf: Configures the Auto Scaling Group (ASG) for high availability.
+
 variables.tf: Contains input variable definitions.
+
 outputs.tf: Defines the output values.
+
 terraform.tfvars: Contains values for variables.
+
 output.tf: to output the ids
 
 # Prerequisites
 Terraform
+
 AWS CLI and configure it
+
 AWS account with permissions to create VPC, EC2, ELB, and ASG resources.
 
 # Setup Instructions
@@ -35,6 +44,7 @@ Run the following command to initialize the project:
 terraform init
 # Step 4: Plan the Terraform configuration
 Run the following command to plan the project:
+
 teraform plan
 
 # Step 5: Apply the Terraform Configuration
@@ -42,7 +52,9 @@ Run the following command to create the infrastructure:
 
 terraform apply
 Type yes to confirm the changes.
+
 you can also run below command
+
 terraform apply --auto-approve
 
 # Step 5: Access Outputs
@@ -52,15 +64,21 @@ Once the infrastructure is created, Terraform will output information like the p
 Key variables used in the project can be found in variables.tf. You can modify them in the terraform.tfvars file to suit your requirements.
 
 variable "aws-region" {}
+
 variable "resource-name" {}
+
 variable "vpc-cidr" {}
+
 variable "pub-subnet" {
   type = list(map(string))
 }
+
 variable "pri-subnet" {
   type = list(map(string))
 }
+
 variable "ec2-ami" {}
+
 variable "ec2-instance-type" {}
 
 # Cleanup
