@@ -20,22 +20,19 @@ AWS account with permissions to create VPC, EC2, ELB, and ASG resources.
 
 # Setup Instructions
 # Step 1: Clone the Repository
-bash
-Copy code
+
 git clone https://github.com/aqeelsadiq/Terraform-two-tier-project.git
 cd Terraform-two-tier-project
 # Step 2: Configure AWS CLI
 Ensure your AWS CLI is configured with proper credentials:
 
-bash
-Copy code
+
 aws configure
 # Step 3: Initialize Terraform
 Run the following command to initialize the project:
 
-bash
-Copy code
-terraform 
+
+terraform init
 # Step 4: Plan the Terraform configuration
 Run the following command to plan the project:
 teraform plan
@@ -43,8 +40,6 @@ teraform plan
 # Step 5: Apply the Terraform Configuration
 Run the following command to create the infrastructure:
 
-bash
-Copy code
 terraform apply
 Type yes to confirm the changes.
 you can also run below command
@@ -71,8 +66,6 @@ variable "ec2-instance-type" {}
 # Cleanup
 To avoid incurring costs, destroy the infrastructure when you are done:
 
-bash
-Copy code
 terraform destroy --auto-approve
 
 
