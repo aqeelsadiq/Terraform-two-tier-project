@@ -32,3 +32,8 @@ output "alb-dns" {
   value = aws_lb.load-balancer.dns_name
 
 }
+
+output "instance-ip" {
+  value = aws_instance.webserver[*].public_ip
+  
+}
